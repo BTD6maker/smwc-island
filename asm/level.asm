@@ -3,7 +3,7 @@
 	; dl $01AF8F		;C Level fade in + level name (init)
 	; dl $01C0D8		;F Level (with control) (main)
 
-!level				=	$015F 		; level number (don't touch this)
+!level				=	$03B2 		; level number (don't touch this)
 
 lorom
 

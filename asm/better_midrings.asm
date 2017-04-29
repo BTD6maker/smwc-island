@@ -4,7 +4,7 @@
 
 lorom
 
-!sublevel = $015F
+!sublevel = $03B2
 
 ; middle ring entrance data changed, so read differently
 org $01E656
