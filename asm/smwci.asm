@@ -1161,3 +1161,70 @@ db $FF,$00
 
 GravTable:
 dw $0000,$0001,$0001,$0000,$FFFF,$FFFE,$FFFE,$FFFF
+
+!sewage_animate = $00CC
+!sewage_timer = $00CE
+sewage_colors:
+dw $0020, $10E4, $124F, $43C2
+
+sewage_inc_mod:
+    TXA
+    INC A
+    INC A
+    AND #$0007
+    TAX
+    RTS
+
+animate_sewage:
+    ; animate sewage palette
+    INC !sewage_timer
+    LDA !sewage_timer
+    CMP #$0004
+    BCC .ret
+
+    STZ !sewage_timer
+
+    LDX !sewage_animate
+    LDA sewage_colors,x
+    STA $7020A6
+    JSR sewage_inc_mod
+
+    LDA sewage_colors,x
+    STA $7020A8
+    JSR sewage_inc_mod
+
+    LDA sewage_colors,x
+    STA $7020AA
+    JSR sewage_inc_mod
+
+    LDA sewage_colors,x
+    STA $7020AC
+
+    LDA !sewage_animate
+    DEC A
+    DEC A
+    AND #$0007
+    STA !sewage_animate
+
+.ret
+    RTS
+
+init_sewer:
+    ; sewer water color
+    LDA #$00E0
+    STA $7020A2
+
+    ; sewer platforms
+    LDA #$25D4
+    STA $7020B2
+
+    ; sewer shading
+    LDA #$192A
+    STA $702098
+    LDA #$1509
+    STA $70209A
+    LDA #$10C9
+    STA $70209C
+    LDA #$0CA5
+    STA $70209E
+    RTS

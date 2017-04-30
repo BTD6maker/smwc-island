@@ -591,6 +591,9 @@ level4C:
 level4D:
 level4E:
 level4F:
+    JSR animate_sewage
+    RTS
+
 level50:
 level51:
 level52:
@@ -739,6 +742,9 @@ level7A:
 level7B:
 level7C:
 level7D:
+    JSR animate_sewage
+    RTS
+
 level7E:
 level7F:
 level80:
@@ -763,6 +769,7 @@ level91:
     SEP #$10
     JSL SpriteRain
     RTS
+
 level92:
 level93:
 level94:
@@ -984,18 +991,7 @@ levelCF:
 levelD0:
     RTS
 
-!sewage_animate = $00CC
-!sewage_timer = $00CE
-sewage_colors:
-dw $0020, $10E4, $124F, $43C2
 
-sewage_inc_mod:
-    TXA
-    INC A
-    INC A
-    AND #$0007
-    TAX
-    RTS
 
 levelD1:
 ;     ; animate sewage palette
