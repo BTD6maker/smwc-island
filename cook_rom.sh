@@ -34,3 +34,7 @@ cd asm
 ./asar.exe text_levelnames.asm ../smwci.smc
 ./asar.exe rotating4doors.asm ../smwci.smc
 ./asar.exe better_midrings.asm ../smwci.smc
+
+# cook BPS
+cd ..
+complete_ipss/flips.exe --create yi.smc smwci.smc smwci.bps
