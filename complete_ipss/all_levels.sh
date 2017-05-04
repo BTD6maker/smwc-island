@@ -2,7 +2,7 @@
 sh extract_sublevels.sh yi.bps 37 38 C9 CB D0
 
 # free levels
-sh extract_sublevels.sh yi.bps 20 57 84 AB 10 48 78 A1 BE C8 CF 1E 55 82 AA C1 CE
+sh extract_sublevels.sh yi.bps 20 57 84 AB 10 48 78 A1 BE C8 CF 55 82 AA C1
 
 sh extract_sublevels.sh intro.bps 39
 sh extract_sublevels.sh 1-1.ips 0 36
@@ -47,7 +47,7 @@ sh extract_sublevels.sh 5-3.ips 26 5D 89 AF CA
 sh extract_sublevels.sh 5-4.bps 27 5E B0 D1 74
 sh extract_sublevels.sh 5-5.bps 28 5F 8B
 sh extract_sublevels.sh 5-6.ips 29 60 8C
-sh extract_sublevels.sh 5-7.ips 2A 61 8D B1
+sh extract_sublevels.sh 5-7.ips 2A 61 8D B1 CE 1E
 sh extract_sublevels.sh 5-8.bps 2B 62 8E B2 B3 C4
 sh extract_sublevels.sh 5-E.ips 2C 41 63 8F B4 BA
 sh extract_sublevels.sh 6-1.bps 2D 64 90 B5
