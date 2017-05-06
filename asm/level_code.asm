@@ -591,8 +591,8 @@ level4C:
 level4D:
 level4E:
 level4F:
-    JSR animate_sewage
-    RTS
+    ; JSR animate_sewage
+    ; RTS
 
 level50:
 level51:
@@ -742,8 +742,8 @@ level7A:
 level7B:
 level7C:
 level7D:
-    JSR animate_sewage
-    RTS
+    ; JSR animate_sewage
+    ; RTS
 
 level7E:
 level7F:

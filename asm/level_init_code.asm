@@ -283,8 +283,8 @@ levelinit4C:
 levelinit4D:
 levelinit4E:
 levelinit4F:
-    JSR init_sewer
-    RTS
+    ; JSR init_sewer
+    ; RTS
 
 levelinit50:
 levelinit51:
@@ -492,8 +492,8 @@ levelinit7A:
 levelinit7B:
 levelinit7C:
 levelinit7D:
-    JSR init_sewer
-    RTS
+    ; JSR init_sewer
+    ; RTS
 
 levelinit7E:
 levelinit7F:
