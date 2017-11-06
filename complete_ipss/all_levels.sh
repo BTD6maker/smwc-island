@@ -43,7 +43,7 @@ sh extract_sublevels.sh 4-8.bps 22 59 86 AC
 sh extract_sublevels.sh 4-E.ips 23 5A D5
 sh extract_sublevels.sh 5-1.ips 24 5B 87 AD C2
 sh extract_sublevels.sh 5-2.bps 25 5C 88 AE
-sh extract_sublevels.sh 5-3.ips 26 5D 89 AF CA
+sh extract_sublevels.sh 5-3.bps 26 5D 89 AF CA
 sh extract_sublevels.sh 5-4.bps 27 5E B0 D1 74
 sh extract_sublevels.sh 5-5.bps 28 5F 8B
 sh extract_sublevels.sh 5-6.ips 29 60 8C
@@ -55,7 +55,7 @@ sh extract_sublevels.sh 6-2.bps 2E 65 91
 sh extract_sublevels.sh 6-3.bps 2F 44 9D C7
 sh extract_sublevels.sh 6-4.ips 30 67 93 B6 C5 CC
 sh extract_sublevels.sh 6-5.ips 31 68 94
-sh extract_sublevels.sh 6-6.ips 32 69 95
+sh extract_sublevels.sh 6-6.bps 32 69 95
 sh extract_sublevels.sh 6-7.ips 33 6A 96 B7
 sh extract_sublevels.sh 6-8.ips 34 6B 97 B8 C6 CD D3 DD
 sh extract_sublevels.sh 6-E.bps 35 6C 98 B9 D8 D9 D6
