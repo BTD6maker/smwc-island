@@ -89,30 +89,6 @@ levelinit10:
 levelinit11:
     RTS
 levelinit12:
-!file = $BB
-
-    LDX #!file      ; change the sprite graphics file number for slot #2
-    STX $6EB7
-
-    LDA #$0400>>6       ; the size of the file decompressed >> 6
-    STA $3006
-    LDA $06FC79+(!file*3)   ; get the address of the file to decompress
-    STA $3002       ; from the pointer table
-    LDA $06FC7B+(!file*3)
-    AND #$00FF
-    STA $3000
-    LDX #$0A        ; call GSU LC_LZ16 decompression routine ($0A8000)
-    LDA #$8000      ; it'll decompress to $705800 (and man is it fast)
-    JSL $7EDE44
-
-    REP #$10
-    LDA #$7058      ; source address bank and high byte
-    STA $00
-    LDX #$5800      ; source address low byte
-    LDY #$D200      ; VRAM destination + $8000
-    LDA #$0400      ; data size
-    JSL $00BEA6     ; set up the info for the VRAM upload that will be done in the next blank
-    RTS
 levelinit13:
 levelinit14:
 levelinit15:
