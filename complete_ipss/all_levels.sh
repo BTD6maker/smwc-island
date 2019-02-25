@@ -53,7 +53,7 @@ sh extract_sublevels.sh 5-E.ips 2C 41 63 8F B4 BA
 sh extract_sublevels.sh 6-1.bps 2D 64 90 B5
 sh extract_sublevels.sh 6-2.bps 2E 65 91
 sh extract_sublevels.sh 6-3.bps 2F 44 9D C7
-sh extract_sublevels.sh 6-4.ips 30 67 93 B6 C5 CC
+sh extract_sublevels.sh 6-4.bps 30 67 93 B6 C5 CC
 sh extract_sublevels.sh 6-5.ips 31 68 94
 sh extract_sublevels.sh 6-6.bps 32 69 95
 sh extract_sublevels.sh 6-7.ips 33 6A 96 B7
