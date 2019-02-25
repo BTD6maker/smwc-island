@@ -22,7 +22,6 @@ cd ..
 cd asm
 ./asar.exe level.asm ../smwci.smc
 ./asar.exe smwci-palettes.asm ../smwci.smc
-./asar.exe autumn_jungle_fix.asm ../smwci.smc
 ./asar.exe taptap_fix.asm ../smwci.smc
 ./asar.exe nep-enut.asm ../smwci.smc
 ./asar.exe scroll_rates.asm ../smwci.smc
@@ -36,6 +35,8 @@ cd asm
 ./asar.exe text_levelnames.asm ../smwci.smc
 ./asar.exe rotating4doors.asm ../smwci.smc
 ./asar.exe better_midrings.asm ../smwci.smc
+./asar.exe autumn_jungle_fix.asm ../smwci.smc
+./asar.exe world6_fix.asm ../smwci.smc
 
 # cook BPS
 cd ..
