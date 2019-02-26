@@ -42,7 +42,7 @@ level6:
 
 .skip_animations
     LDA $7FFF12
-    BNE .do_GFX_upload_maybe
+    BNE .shared
     LDA.w #.gradient>>16
     STA $3000
     LDA.w #.gradient
@@ -62,35 +62,8 @@ level6:
     JSL $008288         ; DMA $705800 -> $7F56DE, $0522 bytes
     LDA #$0001
     STA $7FFF12         ; don't run again
-    BRA .skip_GFX_upload
 
 .shared
-
-
-.do_GFX_upload_maybe
-    LDA $7FFF10
-    BMI .skip_GFX_upload
-    TAX
-    DEC
-    STA $7FFF10
-
-    ; tfw spaghetti also tfw checking level
-    LDA !level
-    CMP #$00D2*2
-    BEQ .fuzzy_GFX
-    LDY .GFX_file_eggplant,x
-    LDA .GFX_slot_eggplant,x
-    BRA .do_upload
-
-.fuzzy_GFX
-    LDY .GFX_file_fuzzy,x
-    LDA .GFX_slot_fuzzy,x
-
-.do_upload
-    TAX
-    JSR ChangeSprGFXFile
-
-.skip_GFX_upload
 
 ; 60C6 (counts to 3) and 60FA are nonzero when swimming
 
@@ -116,16 +89,6 @@ level6:
 
 .swimming
     JMP starcount_decay
-
-.GFX_file_eggplant
-    db $55,$1F,$4E,$53,$46
-.GFX_slot_eggplant
-    db $00,$02,$03,$04,$05
-
-.GFX_file_fuzzy
-    db $55,$52,$4E,$53,$46
-.GFX_slot_fuzzy
-    db $00,$02,$03,$04,$05
 
 .gradient
     dw $46F5,$3AF0,$2AC8,$2A66

@@ -37,6 +37,7 @@ cd asm
 ./asar.exe better_midrings.asm ../smwci.smc
 ./asar.exe autumn_jungle_fix.asm ../smwci.smc
 ./asar.exe world6_fix.asm ../smwci.smc
+./asar.exe spriteset_changes.asm ../smwci.smc
 
 # cook BPS
 cd ..

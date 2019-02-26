@@ -16,6 +16,11 @@ levelinit4:
 levelinit5:
     RTS
 levelinitD2:
+    SEP #$10
+    LDX #$02
+    LDY #$52
+    JSR ChangeSprGFXFile
+
 levelinit6:
     SEP #$10
     LDA #$0001      ; bg sparkles
@@ -43,9 +48,6 @@ levelinit6:
     STA $7020AC
 
 .shared
-    LDA #$0004      ; it's read as 1 byte but I don't care
-    STA $7FFF10
-
     LDA #$000C      ; yoshi color fix
     STA $6116
 
