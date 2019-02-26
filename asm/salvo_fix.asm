@@ -23,3 +23,14 @@ org $06870B
   STA $70E2,y
   LDA #$0630
   STA $7182,y
+
+; coords for the barrier/door that closes up
+org $01A25D
+  dw $03A0
+  dw $0660
+
+org $01A424
+  CMP #$06B0
+
+org $01A42B
+  CMP #$03A0
