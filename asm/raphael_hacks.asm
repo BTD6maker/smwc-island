@@ -95,7 +95,7 @@ org $0FB57B
   LDA #$06
 
 ; change his stomping velocity
-!raph_stomp_velocity = #$10
+!raph_stomp_velocity = #$0D
 org $0FB2FF
   LDA !raph_stomp_velocity
 
