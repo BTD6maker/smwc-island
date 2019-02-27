@@ -692,6 +692,26 @@ level6F:
     STA $7000AE
     RTS
 level70:
+    SEP #$10
+
+    ; make all Slime Drops inedible
+    LDX #$5C
+.loop
+    LDA $7360,x
+    CMP #$0132
+    BNE .skip
+    LDA $6FA2,x
+    ORA #$1000
+    STA $6FA2,x
+
+.skip
+    DEX
+    DEX
+    DEX
+    DEX
+    BPL .loop
+    RTS
+
 level71:
 level72:
 level73:
