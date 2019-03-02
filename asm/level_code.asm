@@ -312,6 +312,9 @@ cutscene_pre:
     LDY #$6A
     JSR ChangeSprGFXFile
 
+    ; set up so palette doesn't corrupt
+    STZ $0948
+
     LDA #$0048
     JSL $03A34C
     BCC .ret
