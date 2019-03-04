@@ -374,41 +374,7 @@ levelinit68:
 levelinit69:
 levelinit6A:
 levelinit6B:
-    RTS
 levelinit6C:
-    ;--- set up starfall
-    SEP #$10
-
-    LDA #$01A2
-    STA $711002
-    LDA #$000F
-    STA $711004
-    LDA #$000A
-    STA $711006
-    SEP #$20
-    LDA.b #.RangesEnd-.Ranges-$2
-    STA $711008
-    REP #$20
-
-    LDX.b #.RangesEnd-.Ranges-$2
-      .uploadloop
-
-    LDA .Ranges,x
-    STA $711020,x
-
-    DEX
-    DEX
-    BPL .uploadloop
-
-    RTS
-
-;start of range (right edge of screen), end of range (left edge of screen)
-;that means that the above first entry will span across the entire second screen
-;little blech but it needs to be like that
-.Ranges
-    dw $0200,$0D00
-.RangesEnd
-
 levelinit6D:
     RTS
 levelinit6E:

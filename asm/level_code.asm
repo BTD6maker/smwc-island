@@ -618,45 +618,7 @@ level68:
 level69:
 level6A:
 level6B:
-    RTS
-
 level6C:
-    SEP #$10
-    JSL SpriteRain
-
-    ;------ clears out stars that fell too low
-    LDX #$17      ;init sprite loop
-
-.Starloop
-    PHX
-
-    TXA
-    CMP #$0006          ;dont loop through reserved sprites
-    BCC .starcleannext
-    ASL
-    ASL
-    TAX                 ;index *4 for all the weird-ass tables
-
-    LDA $6F00,x         ;check sprite state
-    BEQ .starcleannext  ;if dead, skip
-
-    LDA $7360,x         ;sprite ID
-    CMP #$01A2          ;star
-    BNE .starcleannext  ;if not a star, dont kill
-
-    LDA $7182,x
-    CMP #$0510
-    BCC .starcleannext
-
-    LDA #$0000          ;kill sprite
-    STA $6F00,x
-
-.starcleannext
-    PLX
-    DEX          ;decrease loop index
-    BPL .Starloop    ;if not done, keep going
-    RTS
-
 level6D:
     RTS
 level6E:
@@ -1044,7 +1006,24 @@ levelD5:
 levelD6:
 levelD7:
 levelD8:
+    RTS
 levelD9:
+    SEP #$30
+    LDA $7000AC           ;is Yoshi entering a door?
+    CMP #$0A
+    BNE .end_removing_item_memory
+    LDA $70008D           ;is this the right X-screen number?
+    CMP #$0C
+    BNE .end_removing_item_memory
+.removing_item_memory
+    LDX #$00
+.item_memory_loop
+    STZ $0540,x           ;clear page 3 of Item Memory
+    INX
+    CPX #$7F              ;Has it finished?
+    BNE .item_memory_loop
+.end_removing_item_memory
+    RTS
 levelDA:
 levelDB:
 levelDC:
