@@ -5,7 +5,7 @@ sh extract_sublevels.sh yi.bps 37 38 C9 CB D0
 sh extract_sublevels.sh yi.bps 20 57 84 AB 10 48 78 A1 BE C8 CF AA C1
 
 sh extract_sublevels.sh intro.bps 39
-sh extract_sublevels.sh 1-1.ips 0 36
+sh extract_sublevels.sh 1-1.bps 0 36
 sh extract_sublevels.sh 1-2.bps 1 3B
 sh extract_sublevels.sh 1-3.ips 2 3C 6D
 sh extract_sublevels.sh 1-4.bps 3 3D 6E 99
