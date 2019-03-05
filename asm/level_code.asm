@@ -973,31 +973,36 @@ levelD1:
 ;     STA !sewage_animate
 
 ; .poison_water
-;     ; check pause flags
-;     LDA $61B0
-;     ORA $0B55
-;     ORA $0398
-;     ORA $0B0F
-;     BNE .ret
+    ; check pause flags
+    LDA $61B0
+    ORA $0B55
+    ORA $0398
+    ORA $0B0F
+    BNE .ret
 
-;     ; 60C6 (counts to 3) and 60FA are nonzero when swimming
-;     LDA $61B2           ; if baby mario is off, don't do shit
-;     BEQ +
-;     LDA $60FA
-;     BNE .swimming
-; +
-;     LDA !watertime_1_init
-;     STA !gastimer
-;     LDA $03B6
-;     DEC A
-;     DEC A
-;     STA !gasstars
-;     BRA .ret
+    ; 60C6 (counts to 3) and 60FA are nonzero when swimming
+    LDA $61B2           ; if baby mario is off, don't do shit
+    BEQ .reset_timer
+    LDA $60FA
+    BNE .ret_safe_swimming
 
-; .swimming
-;     JSR starcount_decay
+    JSR starcount_decay
+    BRA .ret
 
-; .ret
+.ret_safe_swimming
+    LDA !gasstars
+    STA $03B6
+    RTS
+
+.reset_timer
+    LDA !gastime_2
+    STA !gastimer
+    LDA $03B6
+    DEC A
+    DEC A
+    STA !gasstars
+
+.ret
     RTS
 
 levelD3:

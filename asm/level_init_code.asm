@@ -681,20 +681,20 @@ levelinitCF:
 levelinitD0:
     RTS
 levelinitD1:
-    ; ; init time
-    ; LDA !watertime_1_init
-    ; STA !gastimer
+    ; init time
+    LDA !gastime_2
+    STA !gastimer
 
-    ; ; reset time
-    ; LDA !watertime_1_reset
-    ; STA !decaytime_reset
+    ; reset time
+    LDA !gastime_2
+    STA !decaytime_reset
 
-    ; LDA !watersound
-    ; STA !decaysound
+    LDA !gassound
+    STA !decaysound
 
-    ; ; lock menu items
-    ; LDA #$0001
-    ; STA $0B48
+    ; lock menu items
+    LDA #$0001
+    STA $0B48
 
     ; ; sewer water color
     ; LDA #$00E0
