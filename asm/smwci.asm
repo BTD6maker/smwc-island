@@ -1228,3 +1228,60 @@ init_sewer:
     LDA #$0CA5
     STA $70209E
     RTS
+
+; removes all but keys from inventory
+remove_egg_inventory:
+    ; if size is 0 just get out
+    LDA $7DF6
+    BEQ .ret
+
+    ; begin at first slot
+    LDY #$00
+
+.loop
+    ; load sprite slot of current item
+    LDX $7DF8,y
+
+    ; if key, move onto next
+    LDA $7360,x
+    CMP #$0027
+    BEQ .next
+
+    ; if not key, despawn sprite
+    LDA #$0000
+    STA $6F00,x
+    ; make OAM "invisible"
+    LDA #$00F0
+    STA $7682,x
+
+    ; shuffle all further items up to this slot
+    TYX
+..shuffle_loop
+    ; shuffle next one in here
+    INX
+    INX
+    CPX $7DF6
+    BEQ .dec_inv
+    LDA $7DF8,x
+    STA $7DF6,x
+    BRA ..shuffle_loop
+
+.dec_inv
+    ; decrement inventory count
+    DEC $7DF6
+    DEC $7DF6
+
+    ; did we catch up with count?
+    CPY $7DF6
+    BEQ .ret
+    BRA .loop
+
+.next
+    ; go until reached count
+    INY
+    INY
+    CPY $7DF6
+    BNE .loop
+
+.ret
+    RTS

@@ -120,48 +120,13 @@ levelinit2B:
 levelinit2C:
     SEP #$10
 
+    ; disable items
     LDA #$0001
-    STA $0B48   ; Disable items
+    STA $0B48
 
-    LDA $608C
-    CMP #$0077
-    BNE .Return
-    LDA $6090
-    CMP #$07A0
-    BNE .Return
-
-    STZ $7DF6 ; Remove eggs
-    LDX #$5C    ; Index = 23 * 4
-    .SpriteLoop
-        LDA $6F00,x
-        BEQ .Continue
-
-        ; If Sprite exists...
-
-        LDA $7360,x
-        CMP #$0025  ; Green egg
-        BEQ .Delete
-        CMP #$0024  ; Yellow egg
-        BEQ .Delete
-        CMP #$0023  ; Red egg
-        BNE .Continue
-
-    .Delete
-        ; and if sprite is an egg...
-
-        LDA #$0000
-        STA $6F00,x   ; ...then delete the sprite
-        LDA #$00F0
-        STA $7682,x   ; Make OAM "invisible"
-
-    .Continue
-        DEX
-        DEX
-        DEX
-        DEX
-        BPL .SpriteLoop
-.Return
+    JSR remove_egg_inventory
     RTS
+
 levelinit2D:
 levelinit2E:
 levelinit2F:
@@ -423,38 +388,7 @@ levelinit70:
     LDA #$0001
     STA $0B48
 
-    ; remove egg inventory
-    STZ $7DF6
-    LDX #$5C
-
-.egg_loop
-    LDA $6F00,x
-    BEQ .next
-
-    ; If Sprite exists...
-
-    LDA $7360,x
-    CMP #$0025  ; Green egg
-    BEQ .despawn
-    CMP #$0024  ; Yellow egg
-    BEQ .despawn
-    CMP #$0023  ; Red egg
-    BNE .next
-
-.despawn
-    ; and if sprite is an egg...
-
-    LDA #$0000
-    STA $6F00,x   ; ...then delete the sprite
-    LDA #$00F0
-    STA $7682,x   ; Make OAM "invisible"
-
-.next
-    DEX
-    DEX
-    DEX
-    DEX
-    BPL .egg_loop
+    JSR remove_egg_inventory
     RTS
 
 levelinit71:
