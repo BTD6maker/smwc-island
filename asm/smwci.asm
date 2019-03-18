@@ -765,7 +765,7 @@ Coliseum:
     ASL
     TAX
 
-    LDA #$003A          ;load stompy sound
+    LDA #$0004          ;load spit sound
     JSL $0085D2         ;sound into sound buffer
 
 .Spawnloop
@@ -781,10 +781,22 @@ Coliseum:
     PLX
     ORA .XPos,x   ;add in sprite x offset
     STA $70E2,y   ;store to sprite x
+	STA $00
 
     LDA .YPos,x
     STA $7182,y   ;store to sprite y
+	STA $02
 
+	LDA #$01D4
+    JSL $008B21   ;spawn an ambient sprite (with init) (and get its index into y)
+	LDA $00
+	STA $70A2,y
+	LDA $02
+	STA $7142,y
+	LDA #$0006
+	STA $7782,y
+	LDA #$000B
+	STA $7E4C,y
 
     DEX
     DEX           ;decrease index by 2 (tables = words)
@@ -819,9 +831,22 @@ Coliseum:
     LDA .ArenaX,x ;load arena screen
     ORA .PrizeX,x ;add prize offset
     STA $70E2,y   ;store to sprite x
+	STA $00       ;also preserve it
 
     LDA .PrizeY,x ;load prize sprite's y pos
     STA $7182,y   ;store to sprite y
+	STA $02       ;also preserve it
+
+	LDA #$01D4
+    JSL $008B21   ;spawn an ambient sprite (with init) (and get its index into y)
+	LDA $00
+	STA $70A2,y
+	LDA $02
+	STA $7142,y
+	LDA #$0006
+	STA $7782,y
+	LDA #$000B
+	STA $7E4C,y
 
 
     ;---- delete all loaded flippers on the next and previous screen
