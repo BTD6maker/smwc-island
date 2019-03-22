@@ -27,3 +27,7 @@ dw $90D7,$90C4
 ; Don't add additional blocks
 org $01A4C3
 NOP #4
+
+; Disable OH,MY
+org $05A087
+db $6B
