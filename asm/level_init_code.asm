@@ -165,6 +165,7 @@ levelinit3D:
     STZ !burtgate
     RTS
 levelinit3E:
+    RTS
 levelinit3F:
     SEP #$10
     LDA #$0962      ; water colors
