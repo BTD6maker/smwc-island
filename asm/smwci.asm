@@ -922,6 +922,54 @@ Coliseum:
     RTS
 
 .Clock
+; Display arrows
+    LDA !arenatimer
+    AND #$0008      ;every 8 frames
+    BNE .noarrow
+
+    LDA !arenastage          ;get stage #
+    ASL
+    AND #$00FF          ;rid of B
+    TAX                 ;into x
+
+
+    LDA .SpritesInWave,x
+    BMI .noarrow          ;if entry is FFFF, no arrow
+    STA !arenascount      ;how many arrows to summon this time around
+    CLC
+    ADC !arenasindex
+
+    ASL
+    TAX
+
+..loop
+	LDA #$0224
+	JSL $008B21
+
+    PHX
+    LDA !arenahistage
+    ASL           ;index by current arena *2
+    AND #$00FF
+    TAX
+    LDA .ArenaX,x ;load arena position high byte
+    PLX
+    ORA .XPos,x   ;add in sprite x offset
+    STA $70A2,y   ;store to sprite x
+
+    LDA .YPos,x
+    STA $7142,y   ;store to sprite y
+
+	LDA #$0002
+	STA $73C2,y
+	LDA #$0001
+	STA $7782,y
+
+	DEX : DEX
+    DEC !arenascount
+	BPL ..loop
+
+; Handle timer
+.noarrow
     DEC !arenatimer
     BNE .tick     ;if timer is over,
 
