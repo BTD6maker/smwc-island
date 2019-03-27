@@ -344,9 +344,6 @@ levelinit6C:
 levelinit6D:
     RTS
 levelinit6E:
-    LDA #$0003
-    STA !switchflag     ;reset the switch flag, so the sets get switched again
-
     ; first entrance to room?
     LDA $6094
     AND #$FF00

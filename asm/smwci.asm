@@ -554,19 +554,29 @@ Coliseum:
     dw $0001,$0002,$0001,$0004,$0001,$0001,$FFFF
 
 .XPos             ;x position of the sprite, in the current arena screen
-    dw $0040,$0010,$00E0,$0040,$00B0,$0040,$00E0,$00A0,$0010,$0070,$00D0,$00E0
-    dw $00C0,$002A,$0034,$00A8,$00B0,$00B8,$00C0,$002A,$0032,$00B8,$00BA,$0030,$002E,$00BC,$00C8,$0034,$002A,$0060
-    dw $0020,$00B0 : dw $00B5,$0058,$009A : dw $00BF,$0050 : dw $0040,$0080,$0060,$00B0,$00C0 : dw $00B0,$0020 : dw $0030,$00B0
+    dw $0040,$0010 : dw $00E0,$0040,$00B0 : dw $0040,$00E0 : dw $00A0,$0010 : dw $0070,$00D0,$00E0
+    dw $00C0 : dw $002A,$0034 : dw $00A8,$00B0,$00B8 : dw $00C0,$002A : dw $0032,$00B8 : dw $00BA,$0030 : dw $002E,$00BC,$00C8,$0034,$002A,$0060
+    dw $0020,$00B0 : dw $00B5,$0058,$009A : dw $00BF,$0050 : dw $0040,$0080,$0060,$00B0,$00C0 : dw $00B0,$0020 : dw $0030,$00A0
 
 .YPos             ;y position of the sprite, not relative to the arena
-    dw $02C0,$0270,$0260,$02C0,$02B0,$02C0,$02B0,$02C0,$0270,$0240,$0220,$0260
-    dw $0280,$0280,$0280,$0280,$0280,$0280,$0280,$0280,$0280,$0210,$0280,$0210,$0280,$0280,$0280,$0280,$0280,$02B0
+    dw $02C0 : dw $0270,$0260 : dw $02C0,$02B0,$02C0,$02B0 : dw $02C0,$0270 : dw $0240,$0220,$0260
+    dw $0280 : dw $0280,$0280 : dw $0280,$0280,$0280 : dw $0280,$0280 : dw $0280,$0210 : dw $0280,$0210 : dw $0280,$0280,$0280,$0280,$0280,$02B0
     dw $02B0,$0220 : dw $02C0,$0250,$0280 : dw $0250,$0280 : dw $0220,$0250,$02A0,$02C0,$0250 : dw $0220,$0230 : dw $0280,$0220
 
+.ArrowType        ;how the arrows are spawned
+    dw $0000 : dw $0000,$0000 : dw $0000,$0000,$0000,$0000 : dw $0004,$0000 : dw $0000,$0002,$0000
+    dw $0000 : dw $0000,$0000 : dw $0000,$0000,$0000 : dw $0000,$0000 : dw $0000,$0002 : dw $0000,$0002 : dw $0000,$0000,$0000,$0000,$0000,$0000
+    dw $0000,$0002 : dw $0000,$0000,$0000 : dw $0000,$0000 : dw $0002,$0000,$0000,$0000,$0000 : dw $0002,$0002 : dw $0000,$0002
+
+
+	;0000 = downwards
+	;0002 = upwards
+	;0004 = two arrows (for twin burt)
+
 .Numbers          ;sprite ID of the sprite, some sprites listed below, more in Golden Egg
-    dw $001E,$0159,$0159,$0066,$009E,$0065,$0113,$00E7,$0113,$015E,$00FA,$009B
+    dw $001E : dw $0159,$0159 : dw $0066,$009E,$0065,$0113 : dw $00E7,$0113 : dw $015E,$00FA,$009B
     ;lone shyguy, double grunt, ptooie + chomp rock + red coin + snifit, twin burt + snifit, shyguy wheel + flower + mace guy
-    dw $00FB,$00FC,$00FC,$00FC,$00FB,$00FC,$00FB,$00FC,$00FC,$00E7,$0113,$00E7,$0159,$00FC,$00FB,$00FC,$00FB,$015B
+    dw $00FB : dw $00FC,$00FC : dw $00FC,$00FB,$00FC : dw $00FB,$00FC : dw $00FC,$00E7 : dw $0113,$00E7 : dw $0159,$00FC,$00FB,$00FC,$00FB,$015B
     ;spearguy * 8, spearguy * 2 + burt, 1 burt + snifit + grunt, spearguy * 4 + dancing guy * 2
     dw $0113,$0113 : dw $009F,$009E,$010E : dw $00FB,$00FC : dw $010E,$0003,$010E,$0113,$015A : dw $0159,$015A : dw $001E,$0065
     ;snifit * 2, spitty plant + rock + crate (star), spear guy * 2 , crate (star) * 2 + crate (key) + snifit + grunt, grunt * 2, lone shyguy + red coin
@@ -954,13 +964,17 @@ Coliseum:
     LDA .ArenaX,x ;load arena position high byte
     PLX
     ORA .XPos,x   ;add in sprite x offset
-    STA $70A2,y   ;store to sprite x
+	STA $00
 
     LDA .YPos,x
-    STA $7142,y   ;store to sprite y
+	STA $02
 
-	LDA #$0002
-	STA $73C2,y
+	PHX
+	LDA .ArrowType,x
+	TAX
+	JSR.w (.ArrowSpawning,x)
+	PLX
+
 	LDA #$0001
 	STA $7782,y
 
@@ -987,6 +1001,60 @@ Coliseum:
 
 .notick
     RTS
+
+.ArrowSpawning
+dw ..DownArrow
+dw ..UpArrow
+dw ..TwoArrows
+
+..DownArrow
+	LDA $00
+    STA $70A2,y   ;store to sprite x
+	LDA $02
+	CLC : ADC #$0008
+    STA $7142,y   ;store to sprite y
+
+	LDA #$0002    ;arrow direction
+	STA $73C2,y
+RTS
+
+..UpArrow
+	LDA $00
+    STA $70A2,y   ;store to sprite x
+	LDA $02
+	SEC : SBC #$0008
+    STA $7142,y   ;store to sprite y
+
+	LDA #$0003    ;arrow direction
+	STA $73C2,y
+RTS
+
+..TwoArrows
+	LDA $00
+    STA $70A2,y   ;store to sprite x
+	LDA $02
+	CLC : ADC #$0008
+    STA $7142,y   ;store to sprite y
+
+	LDA #$0002    ;arrow direction
+	STA $73C2,y
+
+	LDA #$0001
+	STA $7782,y
+
+	LDA #$0224    ;spawn a second arrow
+	JSL $008B21
+
+	LDA $00
+	CLC : ADC #$0030
+    STA $70A2,y   ;store to sprite x
+	LDA $02
+	CLC : ADC #$0008
+    STA $7142,y   ;store to sprite y
+
+	LDA #$0002    ;arrow direction
+	STA $73C2,y
+RTS
 
 
 ;----------------------------------------------

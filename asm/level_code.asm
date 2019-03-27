@@ -623,33 +623,6 @@ level6D:
     RTS
 level6E:
     SEP #$10
-    ;--- spriteset switch at a certain point
-    !switchflag = $0280
-
-    LDA !switchflag
-    BEQ .noswitch   ;only switch twice
-
-    LDA $608C
-    CMP #$05D0      ;check for position
-    BCC .noswitch
-
-    ;CMP #$0C20      ;dont do it later on, no point (for the mid ring)
-    ;BCS .noswitch
-
-    DEC !switchflag
-    BEQ .secondswitch
-
-    LDX #$04            ;slot 4   (3 is the bandit!)
-    LDY #$39            ;dance guy file
-    JSR ChangeSprGFXFile    ;jump to imamelia's code
-    BRA .noswitch
-
-.secondswitch
-    LDX #$02            ;slot 2
-    LDY #$35            ;spear guy file
-    JSR ChangeSprGFXFile    ;jump to imamelia's code
-
-.noswitch
     JSR Coliseum       ;jump to the coliseum mechanics
     RTS
 level6F:
