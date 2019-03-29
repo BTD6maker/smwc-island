@@ -1,3 +1,8 @@
+; custom palette for ???
+org $3FAEA2
+db $80, $30, $E2, $30, $A4, $4D, $88, $6A
+db $80, $30, $E2, $30, $A4, $4D, $88
+
 ; BG2 palette 33 for stage 4-8
 org $3FBCF2
 db $A4, $10, $83, $10, $62, $08, $40, $08
