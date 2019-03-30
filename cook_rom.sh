@@ -18,6 +18,9 @@ sh all_levels.sh
 cd ..
 ./LevelTool.exe -i smwci.smc
 
+# graphics
+complete_ipss/flips.exe --apply graphics/yoshicolorfix.ips smwci.smc
+
 # apply all ASM
 cd asm
 ./asar.exe level.asm ../smwci.smc
