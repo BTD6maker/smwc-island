@@ -45,6 +45,7 @@ cd asm
 ./asar.exe autumn_jungle_fix.asm ../smwci.smc
 ./asar.exe world6_fix.asm ../smwci.smc
 ./asar.exe spriteset_changes.asm ../smwci.smc
+./asar.exe 5worlds.asm ../smwci.smc
 
 # cook BPS
 cd ..
