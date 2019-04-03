@@ -1428,7 +1428,9 @@ remove_egg_inventory:
     RTS
 
 !koopa_ID = #$016C
-!koopa_num = #06
+!beach_ID = #$016A
+!shell_ID = #$0168
+!koopa_num = #03
 
 hookbill_count_koopas:
     ; start out count at 0
@@ -1444,11 +1446,17 @@ hookbill_count_koopas:
     LDA $6F00,y
     BEQ .next_sprite
 
-    ; is this sprite not a koopa? don't count
+    ; is this sprite not a koopa or shell? don't count
     LDA $7360,y
     CMP !koopa_ID
-    BNE .next_sprite
+    BEQ .increase_koopa_count
+    CMP !beach_ID
+    BEQ .increase_koopa_count
+    CMP !shell_ID
+    BEQ .increase_koopa_count
+    BRA .next_sprite
 
+.increase_koopa_count
     ; koopa? count
     INX
 
