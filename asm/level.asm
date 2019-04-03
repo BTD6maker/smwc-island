@@ -535,3 +535,5 @@ incsrc level_code.asm
 incsrc level_init_code.asm
 
 print bytes
+
+incsrc hookbill.asm

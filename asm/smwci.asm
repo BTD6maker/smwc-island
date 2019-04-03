@@ -1426,3 +1426,50 @@ remove_egg_inventory:
 
 .ret
     RTS
+
+!koopa_ID = #$016C
+!koopa_num = #06
+
+hookbill_count_koopas:
+    ; start out count at 0
+    PHX
+    PHY
+    LDX #$00
+
+    ; loop through sprite tables
+    LDY #$5C
+
+.loop_sprite
+    ; make sure this slot is spawned in
+    LDA $6F00,y
+    BEQ .next_sprite
+
+    ; is this sprite not a koopa? don't count
+    LDA $7360,y
+    CMP !koopa_ID
+    BNE .next_sprite
+
+    ; koopa? count
+    INX
+
+.next_sprite
+    DEY
+    DEY
+    DEY
+    DEY
+    BNE .loop_sprite
+
+    PLY
+
+    ; limit koopas to a number
+    CPX !koopa_num
+    BCS .spawn_ambient
+
+    ; spawn koopa
+    PLX
+    JML $019077
+
+.spawn_ambient
+    ; jump to spawning ambient sprite instead of koopa
+    PLX
+    JML $019050

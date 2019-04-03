@@ -1,2 +1,6 @@
-org $019078
-db $6C, $01
+org $019077
+  LDA !koopa_ID
+
+org $019049
+  JML hookbill_count_koopas
+  NOP #3
