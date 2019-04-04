@@ -1430,7 +1430,7 @@ remove_egg_inventory:
 !koopa_ID = #$016C
 !beach_ID = #$016A
 !shell_ID = #$0168
-!koopa_num = #03
+!koopa_num = #$03
 
 hookbill_count_koopas:
     ; start out count at 0
