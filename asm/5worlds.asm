@@ -125,3 +125,13 @@ org $17D2FE
 
 org $17D65D
   db $0A
+
+; save high score after completing 5-8
+org $0DFC3E
+  db $EF
+
+org $0DFC43
+  db $EF
+
+org $0DFC49
+  db $EF
