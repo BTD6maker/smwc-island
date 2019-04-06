@@ -635,6 +635,9 @@ Coliseum:
     LDA $7E1A
     STA !arenaprevmaximum
 
+	LDA #$0001
+    STA $0B48     ;disable items
+
 .return3
     RTS
 
@@ -858,6 +861,7 @@ Coliseum:
 	LDA #$000B
 	STA $7E4C,y
 
+    STZ $0B48     ;reenable items
 
     ;---- delete all loaded flippers on the next and previous screen
     ;LDX #$17      ;init sprite loop
