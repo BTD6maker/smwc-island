@@ -902,7 +902,73 @@ levelC5:
 levelC6:
 levelC7:
 levelC8:
+    RTS
+
+!acid_ID = #$013B
+!acid_wave_amount = #$0010
+!acid_threshold_right = #$0180
+!acid_threshold_left = #$FE80
+
 levelC9:
+    SEP #$10
+    ; loop through sprite tables
+    LDX #$5C
+
+.loop_sprite
+    ; make sure this slot is spawned in
+    LDA $6F00,x
+    BEQ .next_sprite
+
+    ; is this sprite not froggy acid? don't do anything
+    LDA $7360,x
+    CMP !acid_ID
+    BNE .next_sprite
+
+    ; 0 means no direction yet
+    LDA $7900,x
+    BNE .check_direction
+
+    ; otherwise, random direction
+    LDA $10
+    STA $7900,x
+
+.check_direction
+    BMI .check_left
+
+    ; if past threshold, start moving left
+    LDA $7220,x
+    CMP !acid_threshold_right
+    BPL .move_left
+
+    ; otherwise, continue moving right
+.move_right
+    CLC
+    ADC !acid_wave_amount
+    STA $7220,x
+    LDA #$0001
+    STA $7900,x
+    BRA .next_sprite
+
+.check_left
+    LDA $7220,x
+    CMP !acid_threshold_left
+    BMI .move_right
+
+    ; otherwise, continue moving left
+.move_left
+    SEC
+    SBC !acid_wave_amount
+    STA $7220,x
+    LDA #$FFFF
+    STA $7900,x
+
+.next_sprite
+    DEX
+    DEX
+    DEX
+    DEX
+    BNE .loop_sprite
+    RTS
 levelCA:
 levelCB:
 levelCC:
