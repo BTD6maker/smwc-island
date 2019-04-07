@@ -371,6 +371,8 @@ levelinit6E:
     LDA #$020D
     STA !arenastage
 
+    STZ !arenastate
+
     LDA #$001E
     STA !arenasindex
 
