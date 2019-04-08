@@ -26,6 +26,7 @@ cd asm
 ./asar.exe level.asm ../smwci.smc
 ./asar.exe palettes.asm ../smwci.smc
 ./asar.exe taptap_fix.asm ../smwci.smc
+./asar.exe poochy_bonus_game.asm ../smwci.smc
 ./asar.exe nep-enut.asm ../smwci.smc
 ./asar.exe scroll_rates.asm ../smwci.smc
 ./asar.exe revert_FFs.asm ../smwci.smc
