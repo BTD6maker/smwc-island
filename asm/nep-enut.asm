@@ -6,7 +6,7 @@ org $02C07E
 freecode $FF
 
 hijack:
-	LDA $015F
+	LDA $03B2
 	CMP #$003F*2
 	BEQ .ok
 	LDA $BF09,y
