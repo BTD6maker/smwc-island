@@ -1019,6 +1019,11 @@ levelD1:
     ORA $0B0F
     BNE .ret
 
+    ; check safe zone
+    LDA $6090
+    CMP #$0600
+    BCC .ret
+
     ; 60C6 (counts to 3) and 60FA are nonzero when swimming
     LDA $61B2           ; if baby mario is off, don't do shit
     BEQ .reset_timer

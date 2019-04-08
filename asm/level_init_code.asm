@@ -615,21 +615,7 @@ levelinitCF:
 levelinitD0:
     RTS
 levelinitD1:
-    ; init time
-    LDA !gastime_2
-    STA !gastimer
-
-    ; reset time
-    LDA !gastime_2
-    STA !decaytime_reset
-
-    LDA !gassound
-    STA !decaysound
-
-    ; lock menu items
-    LDA #$0001
-    STA $0B48
-
+    JMP levelinitB0
     ; ; sewer water color
     ; LDA #$00E0
     ; STA $7020A2
@@ -647,7 +633,6 @@ levelinitD1:
     ; STA $70209C
     ; LDA #$0CA5
     ; STA $70209E
-    RTS
 levelinitD3:
 levelinitD4:
 levelinitD5:
