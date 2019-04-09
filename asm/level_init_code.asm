@@ -543,6 +543,8 @@ levelinitAF:
 levelinitB0:
     ; init & reset times
     LDA !gastime_2
+
+.load_decay
     STA !gastimer
     STA !decaytime_reset
 
@@ -615,7 +617,8 @@ levelinitCF:
 levelinitD0:
     RTS
 levelinitD1:
-    JMP levelinitB0
+    LDA !gastime_3
+    JMP levelinitB0_load_decay
     ; ; sewer water color
     ; LDA #$00E0
     ; STA $7020A2

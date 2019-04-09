@@ -4,7 +4,8 @@
 starcount_decay:
     ; $12C = 300 frames = 5 seconds
     !gastime_1 = #$012C
-    !gastime_2 = #$0080
+    !gastime_2 = #$0078
+    !gastime_3 = #$008C
     !watertime_1_init = #$0003
     !watertime_1_reset = #$000C
     !watertime_2_init = #$001E
