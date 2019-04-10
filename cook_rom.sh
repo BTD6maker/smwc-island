@@ -46,6 +46,7 @@ cd asm
 ./asar.exe world6_fix.asm ../smwci.smc
 ./asar.exe spriteset_changes.asm ../smwci.smc
 ./asar.exe 5worlds.asm ../smwci.smc
+./asar.exe kamek_fixes.asm ../smwci.smc
 
 # cook BPS
 cd ..
