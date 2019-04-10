@@ -8,18 +8,18 @@ org $0CDA76
   db $04, $04, $01, $01, $04, $01, $01, $01
   db $04, $01, $01, $01
 
-  dw $00D8  ; burt
-  dw $00D8  ; salvo
-  dw $00FA  ; boo
-  dw $00FA  ; roger
-  dw $00D8  ; froggy
-  dw $00FA  ; naval piranha
-  dw $00FA  ; milde
-  dw $00FA  ; hookbill
-  dw $00D8  ; sluggy
-  dw $00FA  ; raphael
-  dw $00FA  ; tap tap
-  dw $00FA  ; bowser
+  dw $00D8  ; 1-4
+  dw $00D8  ; 1-8
+  dw $00FA  ; 2-4
+  dw $00FA  ; 2-8
+  dw $00D8  ; 3-4
+  dw $00FA  ; 3-8
+  dw $00FA  ; 4-4
+  dw $00FA  ; 4-8
+  dw $00D8  ; 5-4
+  dw $00FA  ; 5-8
+  dw $00FA  ; 6-4
+  dw $00FA  ; 6-8
 
 org $0CE569
 ; boss palette pointers (after transformation)
