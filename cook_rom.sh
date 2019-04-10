@@ -5,7 +5,7 @@ mkdir Levels
 # free up space in fresh ROM
 cp yi.smc smwci.smc
 cd graphics
-winpty ./ycompress.exe 1 120200 ../smwci.smc cleangfx-cleaned.bin
+winpty ./ycompress.exe 1 120200 ../smwci.smc allgfx.bin
 cd ../asm
 ./asar.exe free_space.asm ../smwci.smc
 ./asar.exe prevent_freespace.asm ../smwci.smc
