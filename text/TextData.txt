@@ -1,0 +1,950 @@
+1
+/\\This paradise is
+Yoshi/2Bs Island/CF
+where all the
+Yoshies live/F3
+They are all in an
+uproar over the
+baby that fell
+from the sky/F3///
+
+2
+/\\Wait/C7 The baby
+seems to know
+where he wants to
+go /F3/F3/F3
+The bond between
+the twins informs
+each of them where
+the other one is/F3
+The Yoshies decide
+to carry the baby
+to his destination
+via a relay system/3F
+Now begins a new
+adventure for the
+Yoshies and baby
+Mario/F3///
+
+3
+/\\If baby Mario falls
+off Yoshi/2Bs back/CF
+the Countdown
+Timer will begin/F3
+When it reaches 0/CF
+Kamek/2Bs toadies
+will kidnap baby
+Mario/C7
+The more Stars /F6/F7
+you collect/CF the
+safer you are/F3
+
+The Countdown
+Timer will slowly
+count back up to
+10/F3
+Complete a stage
+by passing baby
+Mario to the next
+Yoshi/F3///
+
+4
+/\\Yoshi can grab
+bubbles with his
+tongue and spit
+them out some-
+-where else.
+Use this to reach
+greater heights!///
+
+5
+/\\Salvo's locked his
+castle up tight.
+Find another way
+inside!///
+
+6
+/\\SAFETY CODE
+VIOLATION: This
+castle is full of
+toxic gas.
+Collecting stars
+and staying in
+motion is advised
+for your health.///
+
+7
+/\\
+INSERT TUTORIAL MESSAGE HERE
+///
+
+8
+/\\Jump and hold /SB
+after pounding
+the red platform
+to avoid falling.
+Also, if you see
+a coin arrow,
+shoot where it
+points to! WHOA!///
+
+9
+/\\We at SMWCentral
+poured all sorts
+of stuff into
+creating this hack
+for your
+entertainment.
+It is full of
+levels. Enjoy!///
+
+10
+/\\I wonder how many
+people will read
+this message...///
+
+11
+/\\Seeds rebound
+off a tulip at an
+angle, and the
+Slugger will hit
+them when they
+get near. Try to
+get the red coin!///
+
+12
+/\\Not handing over
+the baby, are we?
+I'll just crush
+you flat then!///
+
+13
+/\\It's terribly
+rude to break in,
+you know ...
+Salvo here will
+have to teach you
+a thing or two
+about private
+property!///
+
+14
+/\\It's over, Yoshi!
+This thief prince
+is about to steal
+your life away!///
+
+15
+/\\Does widdle baby
+Mario want to be
+an astronaut?
+No? TOO BAD!!
+You two are going
+to SPACE anyway!///
+
+16
+/\\Little slug! Hear
+me now! Chase
+this pest to the
+ends of the Earth!///
+
+17
+/\\Hi, Yoshi! I've
+got an a-MAZE-ing
+boss for-
+Ah, forget it ...///
+
+18
+/\\Tap, tap, tap ...
+This guy is 100
+percent invincible!
+Now I can't lose!!///
+
+19
+/\\When the moon hits
+your eye like a
+big koopa shell...
+THAT'S AMORE!!
+Make this quick,
+Koopa! I've got a
+strange craving
+for some pasta ...///
+
+20
+/\\Well, Yoshi, it's
+been a gas!
+But how will you
+triumph against a
+target you can't
+hit?///
+
+21
+/\\YOU/C7 are n/C9n/C9not
+welcome HERE/C7/C7/C7
+Yoshi/CFplease hand
+OVER THE BABY/C7///
+
+22
+/\\Oh/CF dear /F3/F3/F3
+What to do /F3/F3/F3
+Young Master
+Bowser wakes /F3/F3/F3///
+
+23
+/\\Kamek/CF it/2Bs too
+noisy in here/C7/C7
+I wanna go
+sweepy/C9byyye/C7/C7/C7///
+
+24
+/\\Huh/C6/C6
+Hmm/C6/C7/C7/C6
+Mmmmm/C7/C7/C7/C7/C6/C7
+
+What kind of gween
+donkey is dat/C6
+Looks wyke fun/C7
+Me wanna ri/C9ide/C7/C7/C7
+
+
+/TS/31MINE/C7/C7
+
+
+MINE/C7/C7/C7///
+
+25
+/\\How dare you/C6/C7
+It/2Bs not fair /F3/F3/F3
+You are such a
+meanie /F3/F3/F3
+Someday /F3/F3/F3
+We will be back /F3/F3/F3
+You/2Bll see/C7
+Waaaaaah /F3/F3/F3///
+
+26
+/\\Yoshi/CF why did you
+do this/C6/C6/C6
+Young Master/CF let
+me help you/C7 Here/C7///
+
+27
+/\\      /D5/D6/D7/LL
+Try this stage
+again/C6
+  /D4Yes      No/_D
+
+28
+/\\      /D5/D6/D7/LL
+Re/C9start from the
+Middle/C9Ring/C6
+  /D4Yes      No/_D
+
+29
+/\\      FLIP CARDS
+
+     Item Chance/C7
+
+Aim with the
+cursor and press
+/18/19/F3 Collect the
+item shown/F3
+If you get Kamek/CF
+you lose all the
+items/F3 Hit /D2Exit/D2
+to quit/F3///
+
+30
+/\\     SCRATCH AND
+          MATCH
+
+    1 UP  Chance/C7
+Scratch 3 boxes/C7
+Uncover Marios to
+gain 1 UPs/C7/C7
+Scratch On/C7
+3 Toadies /C9 0 UP
+1 Mario     /C9 1 UP
+2 Marios   /C9 2 UP
+3 Marios   /C9 5 UP///
+
+31
+/\\     SLOT MACHINE
+
+     1 UP  Chance/C7
+
+A chance to earn
+extra lives/F3 Press
+/18/19 to stop each
+tumbler/C7///
+
+32
+/\\         ROULETTE
+
+      1 UP Chance/C7
+
+Set the number of
+Yoshies with /CA/CB/F3
+Press /18/19 to start
+and /18/19 to stop/F3
+The combination of
+the 2 tumblers and
+number of Yoshies
+give you 1 UPs/C7
+You can not play
+this game if you
+have only 1 Yoshi
+remaining/F3///
+
+33
+/\\    DRAWING LOTS
+
+    Item  Chance/C7
+
+A chance to gain
+an item/F3 Flip only
+1 card/F3 Receive
+the item shown/C7///
+
+34
+/\\    MATCH  CARDS
+
+    Item  Chance/C7
+
+Flip cards over in
+pairs/F3 Receive the
+items shown on
+matched pairs only
+Continue flipping
+until you have
+failed to match
+twice/F3///
+
+35
+/\\
+ /D4 Continue
+    Exit
+/_C
+
+36
+/\\Well, well, well,
+look who the cat
+dragged in! I'm
+amazed to see
+you've made it this
+far, Yoshi! But it
+all ends here!
+You'll never reach
+our prince! Don't
+bother trying to,
+and even if
+you do...///
+
+37
+/\\GOOD LUCK GETTING
+UP THAT TOWER!
+KYA HA HA HA!///
+
+38
+/\\  Special Flower/26
+Gather 5 for a
+1UP/C7 They add to
+your point total/F3
+They also add
+flowers to the
+Goal Ring
+roulette/C7///
+
+39
+/\\This is the
+Middle/C9Ring for
+this level/F3 You may
+continue from here///
+
+40
+/\\Grab baby Mario/C7
+Jump or even use
+your tongue to
+touch him/F3
+Throw eggs at him/C7
+If the Timer drops
+to 0/CF he will be
+kidnapped/C7/C7///
+
+/__
+
+1 - 1
+      Eggs in the
+       Morning
+0
+0
+0
+0
+
+1 - 2
+         Shy Guy
+            Hills
+0
+0
+0
+0
+
+1 - 3
+     Green Glove
+       Grove
+0
+0
+0
+0
+
+1 - 4
+ 
+  /0Cburtblasted
+0
+0
+0
+0
+
+1 - 5
+       Heads Up,
+           Yoshi!
+0
+4
+0
+0
+
+1 - 6
+        Climbing
+    Mt. Paranoia
+0
+0
+0
+0
+
+1 - 7
+         Flippin'
+    Sky Platforms
+0
+0
+0
+0
+
+1 - 8
+    Slime Castle
+      Break-In
+5
+0
+0
+0
+
+1 - E
+           Higher
+       Than a Kite
+0
+27
+1
+2
+
+1 - ?
+     Hot Lips
+      Hideout
+13
+3
+12
+39
+
+1 - ?
+
+
+29
+35
+0
+0
+
+1 - ?
+      /YY Time!
+
+40
+38
+28
+7
+
+2 - 1
+       Floating
+    Landmasses!
+0
+0
+0
+0
+
+2 - 2
+      Milde's
+      Hideout
+0
+0
+0
+0
+
+2 - 3
+    The Ballad of
+    Bouncing Bill
+0
+9
+0
+0
+
+2 - 4
+Hideout of the
+  Thief Prince
+0
+0
+0
+0
+
+2 - 5
+Boundary Between
+ Life and Death
+0
+0
+0
+0
+
+2 - 6
+        The Epic
+   Misleading Cave
+0
+0
+0
+0
+
+2 - 7
+     The Cliffs
+     of Kaboom!
+0
+0
+0
+0
+
+2 - 8
+    Time For Some
+         R and R
+0
+0
+0
+0
+
+2 - E
+    Attack on
+     Tap-Tap
+14
+15
+0
+0
+
+2 - ?
+  Please Don't Eat
+        PoochyZ
+0
+0
+0
+0
+
+2 - ?
+
+
+30
+35
+0
+0
+
+2 - ?
+
+
+0
+0
+0
+0
+
+3 - 1
+    Diggin' the
+      Platforms
+0
+0
+0
+0
+
+3 - 2
+        No More
+  Monkey Business
+0
+0
+0
+0
+
+3 - 3
+     Muddy Melon
+         Cavern
+0
+0
+11
+0
+
+3 - 4
+          Slimy
+   Sluggy Sewers
+0
+0
+0
+0
+
+3 - 5
+       Goonie
+     Riverside
+0
+0
+0
+0
+
+3 - 6
+        Monkey
+        Shines
+0
+0
+0
+0
+
+3 - 7
+      Lake of the
+          Lakitu
+0
+0
+0
+0
+
+3 - 8
+Naval Piranha's
+Perplexing Palace
+0
+0
+0
+0
+
+3 - E
+      Hazardous
+          Heights
+16
+17
+0
+0
+
+3 - ?
+         Autumn
+         Jungle
+0
+10
+8
+0
+
+3 - ?
+
+
+31
+35
+0
+0
+
+3 - ?
+
+
+0
+0
+0
+0
+
+4 - 1
+       Morphic
+      Mountain
+0
+0
+0
+0
+
+4 - 2
+         Ground
+     Poundemonium
+0
+0
+0
+0
+
+4 - 3
+    Platforming
+Can Be Troublesome
+0
+0
+0
+0
+
+4 - 4
+       Explosion
+         Chapel
+0
+0
+0
+0
+
+4 - 5
+          This is
+        Halloween
+0
+0
+0
+0
+
+4 - 6
+         ghosteroni
+               zone
+0
+0
+0
+0
+
+4 - 7
+         Creepy
+         Canopy
+0
+0
+0
+0
+
+4 - 8
+When the Moon Hits
+       Your Eye
+0
+0
+0
+0
+
+4 - E
+       Melons
+      Are Fun!
+18
+19
+0
+0
+
+4 - ?
+    Castle of
+   Inversion
+0
+0
+0
+0
+
+4 - ?
+
+
+32
+35
+0
+0
+
+4 - ?
+
+
+0
+0
+0
+0
+
+5 - 1
+    Mount Fucjkign
+
+0
+0
+0
+0
+
+5 - 2
+      Into the
+        Storm
+0
+0
+0
+0
+
+5 - 3
+     This is How
+       it Snows
+0
+0
+0
+0
+
+5 - 4
+     Banned by
+        O/3FS/3FH/3FA/3F
+6
+0
+0
+0
+
+5 - 5
+       Wheelie
+     Waterways
+0
+0
+0
+0
+
+5 - 6
+            Gravity
+               Falls
+0
+0
+0
+0
+
+5 - 7
+The Great Wall of
+       Bowser
+0
+0
+0
+0
+
+5 - 8
+          Prince
+   Bowser's Castle
+36
+37
+0
+0
+
+5 - E
+         Earn
+   That Hundo!
+20
+0
+0
+0
+
+5 - ?
+       Temple of
+          Trials
+0
+0
+0
+0
+
+5 - ?
+
+
+33
+35
+0
+0
+
+5 - ?
+
+
+0
+0
+0
+0
+
+6 - 1
+
+
+0
+0
+0
+0
+
+6 - 2
+
+
+0
+0
+0
+0
+
+6 - 3
+
+
+0
+0
+0
+0
+
+6 - 4
+
+
+0
+0
+0
+0
+
+6 - 5
+
+
+0
+0
+0
+0
+
+6 - 6
+
+
+0
+0
+0
+0
+
+6 - 7
+
+
+0
+0
+0
+0
+
+6 - 8
+
+
+0
+12
+12
+12
+
+6 - E
+
+
+0
+21
+22
+23
+
+6 - ?
+
+
+24
+25
+26
+0
+
+6 - ?
+
+
+34
+35
+0
+0
+
+6 - ?
+
+
+0
+0
+0
+0
