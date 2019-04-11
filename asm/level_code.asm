@@ -270,8 +270,8 @@ level33:
 ; consts
 !camera_x_trigger = #$07E0
 !camera_y_dest = #$0080
-!message_box_ID = #$0000
-!message_box_ID_2 = #$002C
+!message_box_ID = #$00DD
+!message_box_ID_2 = #$00DC
 !kamek_x = #$0800
 !kamek_y = #$0780
 

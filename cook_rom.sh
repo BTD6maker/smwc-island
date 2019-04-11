@@ -18,7 +18,12 @@ sh all_levels.sh
 cd ..
 ./LevelTool.exe -i smwci.smc
 
+# text
+cd text
+python texteditor.py ../smwci.smc import
+
 # graphics
+cd ..
 complete_ipss/flips.exe --apply graphics/yoshicolorfix.ips smwci.smc
 
 # apply all ASM
@@ -39,7 +44,7 @@ cd asm
 ./asar.exe naval_fix.asm ../smwci.smc
 ./asar.exe taptaptherednosedreindeer.asm ../smwci.smc
 ./asar.exe entrance_data.asm ../smwci.smc
-./asar.exe text_levelnames.asm ../smwci.smc
+# ./asar.exe text_levelnames.asm ../smwci.smc
 ./asar.exe rotating4doors.asm ../smwci.smc
 ./asar.exe better_midrings.asm ../smwci.smc
 ./asar.exe autumn_jungle_fix.asm ../smwci.smc
