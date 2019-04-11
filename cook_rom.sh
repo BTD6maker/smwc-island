@@ -30,7 +30,6 @@ complete_ipss/flips.exe --apply graphics/yoshicolorfix.ips smwci.smc
 cd asm
 ./asar.exe level.asm ../smwci.smc
 ./asar.exe palettes.asm ../smwci.smc
-./asar.exe taptap_fix.asm ../smwci.smc
 ./asar.exe poochy_bonus_game.asm ../smwci.smc
 ./asar.exe nep-enut.asm ../smwci.smc
 ./asar.exe scroll_rates.asm ../smwci.smc
@@ -44,7 +43,6 @@ cd asm
 ./asar.exe naval_fix.asm ../smwci.smc
 ./asar.exe taptaptherednosedreindeer.asm ../smwci.smc
 ./asar.exe entrance_data.asm ../smwci.smc
-# ./asar.exe text_levelnames.asm ../smwci.smc
 ./asar.exe rotating4doors.asm ../smwci.smc
 ./asar.exe better_midrings.asm ../smwci.smc
 ./asar.exe autumn_jungle_fix.asm ../smwci.smc
@@ -52,6 +50,7 @@ cd asm
 ./asar.exe spriteset_changes.asm ../smwci.smc
 ./asar.exe 5worlds.asm ../smwci.smc
 ./asar.exe kamek_fixes.asm ../smwci.smc
+./asar.exe taptap_fix.asm ../smwci.smc
 
 # cook BPS
 cd ..

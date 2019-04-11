@@ -21,6 +21,19 @@ org $0CDA76
   dw $00FA  ; 6-4
   dw $00FA  ; 6-8
 
+  dw $3E00  ; 1-4
+  dw $3E00  ; 1-8
+  dw $3600  ; 2-4
+  dw $3600  ; 2-8
+  dw $3E00  ; 3-4
+  dw $3600  ; 3-8
+  dw $3600  ; 4-4
+  dw $3600  ; 4-8
+  dw $3E00  ; 5-4
+  dw $3600  ; 5-8
+  dw $3600  ; 6-4
+  dw $3600  ; 6-8
+
 org $0CE569
 ; boss palette pointers (after transformation)
   dl $5FA5CA  ; 1-4
