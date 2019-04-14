@@ -51,6 +51,7 @@ cd asm
 ./asar.exe 5worlds.asm ../smwci.smc
 ./asar.exe kamek_fixes.asm ../smwci.smc
 ./asar.exe taptap_fix.asm ../smwci.smc
+./asar.exe disable_messages.asm ../smwci.smc
 
 # cook BPS
 cd ..
