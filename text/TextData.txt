@@ -1,22 +1,22 @@
 1
 /\\This paradise is
-Yoshi/2Bs Island/CF
+Yoshi's Island,
 where all the
-Yoshies live/F3
+Yoshies live.
 They are all in an
 uproar over the
 baby that fell
-from the sky/F3///
+from the sky.///
 
 2
-/\\Wait/C7 The baby
+/\\Wait! The baby
 seems to know
 where he wants to
-go /F3/F3/F3
+go ...
 The bond between
 the twins informs
 each of them where
-the other one is/F3
+the other one is.
 The Yoshies decide
 to carry the baby
 to his destination
@@ -24,29 +24,29 @@ via a relay system/3F
 Now begins a new
 adventure for the
 Yoshies and baby
-Mario/F3///
+Mario.///
 
 3
 /\\If baby Mario falls
-off Yoshi/2Bs back/CF
+off Yoshi's back,
 the Countdown
-Timer will begin/F3
-When it reaches 0/CF
-Kamek/2Bs toadies
+Timer will begin.
+When it reaches 0,
+Kamek's toadies
 will kidnap baby
-Mario/C7
-The more Stars /F6/F7
-you collect/CF the
-safer you are/F3
+Mario!
+The more Stars /Y*
+you collect, the
+safer you are.
 
 The Countdown
 Timer will slowly
 count back up to
-10/F3
+10.
 Complete a stage
 by passing baby
 Mario to the next
-Yoshi/F3///
+Yoshi.///
 
 4
 /\\Yoshi can grab
@@ -179,150 +179,150 @@ target you can't
 hit?///
 
 21
-/\\YOU/C7 are n/C9n/C9not
-welcome HERE/C7/C7/C7
-Yoshi/CFplease hand
-OVER THE BABY/C7///
+/\\YOU! are n-n-not
+welcome HERE!!!
+Yoshi,please hand
+OVER THE BABY!///
 
 22
-/\\Oh/CF dear /F3/F3/F3
-What to do /F3/F3/F3
+/\\Oh, dear ...
+What to do ...
 Young Master
-Bowser wakes /F3/F3/F3///
+Bowser wakes ...///
 
 23
-/\\Kamek/CF it/2Bs too
-noisy in here/C7/C7
+/\\Kamek, it's too
+noisy in here!!
 I wanna go
-sweepy/C9byyye/C7/C7/C7///
+sweepy-byyye!!!///
 
 24
-/\\Huh/C6/C6
-Hmm/C6/C7/C7/C6
-Mmmmm/C7/C7/C7/C7/C6/C7
+/\\Huh??
+Hmm?!!?
+Mmmmm!!!!?!
 
 What kind of gween
-donkey is dat/C6
-Looks wyke fun/C7
-Me wanna ri/C9ide/C7/C7/C7
+donkey is dat?
+Looks wyke fun!
+Me wanna ri-ide!!!
 
 
-/TS/31MINE/C7/C7
+/TS/31MINE!!
 
 
-MINE/C7/C7/C7///
+MINE!!!///
 
 25
-/\\How dare you/C6/C7
-It/2Bs not fair /F3/F3/F3
+/\\How dare you?!
+It's not fair ...
 You are such a
-meanie /F3/F3/F3
-Someday /F3/F3/F3
-We will be back /F3/F3/F3
-You/2Bll see/C7
-Waaaaaah /F3/F3/F3///
+meanie ...
+Someday ...
+We will be back ...
+You'll see!
+Waaaaaah ...///
 
 26
-/\\Yoshi/CF why did you
-do this/C6/C6/C6
-Young Master/CF let
-me help you/C7 Here/C7///
+/\\Yoshi, why did you
+do this???
+Young Master, let
+me help you! Here!///
 
 27
-/\\      /D5/D6/D7/LL
+/\\      /YY/*x/LL
 Try this stage
-again/C6
-  /D4Yes      No/_D
+again?
+  /a>Yes      No/_D
 
 28
-/\\      /D5/D6/D7/LL
-Re/C9start from the
-Middle/C9Ring/C6
-  /D4Yes      No/_D
+/\\      /YY/*x/LL
+Re-start from the
+Middle-Ring?
+  /a>Yes      No/_D
 
 29
 /\\      FLIP CARDS
 
-     Item Chance/C7
+     Item Chance!
 
 Aim with the
 cursor and press
-/18/19/F3 Collect the
-item shown/F3
-If you get Kamek/CF
+/SA. Collect the
+item shown.
+If you get Kamek,
 you lose all the
-items/F3 Hit /D2Exit/D2
-to quit/F3///
+items. Hit /""Exit/""
+to quit.///
 
 30
 /\\     SCRATCH AND
           MATCH
 
-    1 UP  Chance/C7
-Scratch 3 boxes/C7
+    1 UP  Chance!
+Scratch 3 boxes!
 Uncover Marios to
-gain 1 UPs/C7/C7
-Scratch On/C7
-3 Toadies /C9 0 UP
-1 Mario     /C9 1 UP
-2 Marios   /C9 2 UP
-3 Marios   /C9 5 UP///
+gain 1 UPs!!
+Scratch On!
+3 Toadies - 0 UP
+1 Mario     - 1 UP
+2 Marios   - 2 UP
+3 Marios   - 5 UP///
 
 31
 /\\     SLOT MACHINE
 
-     1 UP  Chance/C7
+     1 UP  Chance!
 
 A chance to earn
-extra lives/F3 Press
-/18/19 to stop each
-tumbler/C7///
+extra lives. Press
+/SA to stop each
+tumbler!///
 
 32
 /\\         ROULETTE
 
-      1 UP Chance/C7
+      1 UP Chance!
 
 Set the number of
-Yoshies with /CA/CB/F3
-Press /18/19 to start
-and /18/19 to stop/F3
+Yoshies with /SD.
+Press /SA to start
+and /SA to stop.
 The combination of
 the 2 tumblers and
 number of Yoshies
-give you 1 UPs/C7
+give you 1 UPs!
 You can not play
 this game if you
 have only 1 Yoshi
-remaining/F3///
+remaining.///
 
 33
 /\\    DRAWING LOTS
 
-    Item  Chance/C7
+    Item  Chance!
 
 A chance to gain
-an item/F3 Flip only
-1 card/F3 Receive
-the item shown/C7///
+an item. Flip only
+1 card. Receive
+the item shown!///
 
 34
 /\\    MATCH  CARDS
 
-    Item  Chance/C7
+    Item  Chance!
 
 Flip cards over in
-pairs/F3 Receive the
+pairs. Receive the
 items shown on
 matched pairs only
 Continue flipping
 until you have
 failed to match
-twice/F3///
+twice.///
 
 35
 /\\
- /D4 Continue
+ /a> Continue
     Exit
 /_C
 
@@ -344,32 +344,6 @@ you do...///
 /\\GOOD LUCK GETTING
 UP THAT TOWER!
 KYA HA HA HA!///
-
-38
-/\\  Special Flower/26
-Gather 5 for a
-1UP/C7 They add to
-your point total/F3
-They also add
-flowers to the
-Goal Ring
-roulette/C7///
-
-39
-/\\This is the
-Middle/C9Ring for
-this level/F3 You may
-continue from here///
-
-40
-/\\Grab baby Mario/C7
-Jump or even use
-your tongue to
-touch him/F3
-Throw eggs at him/C7
-If the Timer drops
-to 0/CF he will be
-kidnapped/C7/C7///
 
 /__
 
@@ -451,7 +425,7 @@ kidnapped/C7/C7///
 13
 3
 12
-39
+0
 
 1 - ?
 
@@ -464,8 +438,8 @@ kidnapped/C7/C7///
 1 - ?
       /YY Time!
 
-40
-38
+0
+0
 28
 7
 
