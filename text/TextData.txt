@@ -74,9 +74,13 @@ motion is advised
 for your health.///
 
 7
-/\\
-INSERT TUTORIAL MESSAGE HERE
-///
+/\\   Hovering Jump:
+By holding /SB
+down, you can
+hover in the air
+for a short time.
+Make the extra
+effort!///
 
 8
 /\\Jump and hold /SB
