@@ -344,6 +344,9 @@ levelinit6C:
 levelinit6D:
     RTS
 levelinit6E:
+print "Level 6E Init: $",pc
+	JSR .SetItemMemory
+
     ; first entrance to room?
     LDA $6094
     AND #$FF00
@@ -367,7 +370,7 @@ levelinit6E:
     CMP #$0B00
     BNE .ret
 
-    STZ !arenahistage
+    ;STZ !arenahistage
     LDA #$020D
     STA !arenastage
 
@@ -379,6 +382,37 @@ levelinit6E:
     ; other entrances should do nothing special
 .ret
     RTS
+
+.SetItemMemory	; This one prevents red coins and flowers from an arena to spawn until an arena starts -- activated arenas don't reset the item memory.
+	PHD
+	LDA $0150
+	ASL
+	TAX
+	LDA $03D3C3,x
+	PHA
+	PLD
+
+	SEP #$10
+	LDA #$0002
+	SEC : SBC !arenahistage
+	TAY
+.Loop
+	LDX .ArenaScreen,y
+	LDA $6CAA,x
+	AND #$003F
+	ASL
+	TAX
+	LDA #$FFFF
+	STA $00,x
+	DEY
+	BPL .Loop
+	REP #$10
+
+	PLD
+RTS
+
+.ArenaScreen:
+db $2E,$2B,$24
 
 levelinit6F:
 levelinit70:

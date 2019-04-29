@@ -625,6 +625,7 @@ level6E:
     SEP #$10
     JSR Coliseum       ;jump to the coliseum mechanics
     RTS
+
 level6F:
     LDA #$0002
     STA $7000AE

@@ -621,6 +621,7 @@ Coliseum:
     CMP .ArenaX,x ;check if he's in the arena area
     BCC .return3  ;if not, RTS
 
+print "Init arena: $",pc
     LDA #$0002   ;invoke first wave by setting it to the timer state
     STA !arenastate
 
@@ -639,16 +640,39 @@ Coliseum:
 	LDA #$0001
     STA $0B48     ;disable items
 
+	SEP #$10
+	PHD
+	LDA $0150
+	ASL
+	TAX
+	LDA $03D3C3,x
+	PHA
+	PLD
+
+	LDX !arenahistage
+	LDY .ArenaScreen,x
+	LDA $6CAA,y
+	ASL
+	AND #$003F
+	TAX
+	STZ $00,x
+
+	PLD
+	REP #$10
+
 .return3
     RTS
 
 .WhiteList    ;which sprites to allow by the end of a round
-    dw $0027,$010E,$0003,$013C,$015B,$015E,$0115,$0114,$00A0,$009E,$0065,$00C0,$00C1,$01A2,$0023,$0024,$0025
-    ;key, crate, crate, down flippers, dancing spear guy, shyguy wheel, coin, snifit bullet, tulip, chomp rock, red coin, cloud (3 stars), cloud (5 stars), star, egg, egg, egg
+    dw $0027,$010E,$0003,$013C,$015B,$015E,$0115,$0114,$00A0,$009E,$0065,$00C0,$00C1,$01A2,$00FA,$0023,$0024,$0025
+    ;key, crate, crate, down flippers, dancing spear guy, shyguy wheel, coin, snifit bullet, tulip, chomp rock, red coin, cloud (3 stars), cloud (5 stars), star, flower, egg, egg, egg
 
 .ClearList    ;which sprites to clear at the end of a round
     dw $015B,$015E,$0114,$009E
     ;dancing spear guy, shyguy wheel, snifit bullet, chomp rock
+
+.ArenaScreen	; The screen number for each arena
+db $24,$2B,$2E
 
 .CheckEnemies
     LDA !arenaframes
@@ -674,7 +698,7 @@ Coliseum:
 
 
     LDA $7360,x   ;sprite ID
-    LDY #$20      ;get length of whitelist table
+    LDY #$22      ;get length of whitelist table
 
 .WhiteLoop
     CMP .WhiteList,y
