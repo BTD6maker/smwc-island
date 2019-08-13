@@ -56,52 +56,52 @@ org $17DC4F
   dw $1800     ; 1-Score
   dw $0C00     ; 2-1
   dw $1000     ; 2-2
-  dw $1000     ; 2-3
-  dw $1000     ; 2-4
+  dw $0C00     ; 2-3
+  dw $0C00     ; 2-4
   dw $0C00     ; 2-5
   dw $1000     ; 2-6
   dw $0C00     ; 2-7
   dw $0C00     ; 2-8
-  dw $0C00     ; 2-E
+  dw $1000     ; 2-E
   dw $0C00     ; 2-Bonus
   dw $1800     ; 2-Controller
   dw $1800     ; 2-Score
   dw $1000     ; 3-1
-  dw $0C00     ; 3-2
+  dw $1000     ; 3-2
   dw $0C00     ; 3-3
   dw $0C00     ; 3-4
-  dw $0C00     ; 3-5
-  dw $0C00     ; 3-6
-  dw $1000     ; 3-7
+  dw $1000     ; 3-5
+  dw $1000     ; 3-6
+  dw $0C00     ; 3-7
   dw $1000     ; 3-8
   dw $0C00     ; 3-E
-  dw $0C00     ; 3-Bonus
+  dw $1000     ; 3-Bonus
   dw $1800     ; 3-Controller
   dw $1800     ; 3-Score
   dw $0C00     ; 4-1
   dw $1000     ; 4-2
   dw $0C00     ; 4-3
-  dw $0C00     ; 4-4
-  dw $1000     ; 4-5
-  dw $0C00     ; 4-6
-  dw $0C00     ; 4-7
+  dw $1000     ; 4-4
+  dw $0C00     ; 4-5
+  dw $1000     ; 4-6
+  dw $1000     ; 4-7
   dw $0C00     ; 4-8
   dw $0C00     ; 4-E
   dw $0C00     ; 4-Bonus
   dw $1800     ; 4-Controller
   dw $1800     ; 4-Score
   dw $0C00     ; 5-1
-  dw $1000     ; 5-2
+  dw $0C00     ; 5-2
   dw $0C00     ; 5-3
-  dw $1000     ; 5-4
+  dw $0C00     ; 5-4
   dw $0C00     ; 5-5
   dw $0C00     ; 5-6
   dw $1000     ; 5-7
   dw $0C00     ; 5-8
   dw $0C00     ; 5-E
-  dw $0C00     ; v
-  dw $1800     ; v
-  dw $1800     ; v
+  dw $1000     ; 5-Bonus
+  dw $1800     ; 5-Controller
+  dw $1800     ; 5-Score
   dw $0C00     ; 6-1
   dw $0C00     ; 6-2
   dw $1000     ; 6-3
