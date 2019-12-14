@@ -84,7 +84,7 @@ org $17F551
   db $FC, $66       ; 4C
   db $ED, $38       ; 4D
   db $29, $45       ; 4E
-  db $5F, $1D       ; 4F
+  db $63, $1D       ; 4F
   db $F1, $6B       ; 50
   db $71, $6B       ; 51
   db $0B, $6E       ; 52
