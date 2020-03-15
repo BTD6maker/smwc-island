@@ -8,7 +8,7 @@ org $02D48A
 
 ; health
 org $02D5B7
-  CMP #$0007
+  CMP #$0006
 
 ; elasticity
 org $02D218
