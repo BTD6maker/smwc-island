@@ -1,6 +1,6 @@
 ; acceleration (movement forward)
 org $02D4A3
-  dw $0100, $0000
+  dw $0140, $0000
 
 ; delay time of non-motion
 org $02D48A
@@ -8,7 +8,7 @@ org $02D48A
 
 ; health
 org $02D5B7
-  CMP #$0006
+  CMP #$0005
 
 ; elasticity
 org $02D218
