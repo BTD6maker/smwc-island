@@ -907,8 +907,8 @@ levelC8:
 
 !acid_ID = #$013B
 !acid_wave_amount = #$0010
-!acid_threshold_right = #$0180
-!acid_threshold_left = #$FE80
+!acid_threshold_right = #$0100
+!acid_threshold_left = #$FF00
 
 levelC9:
     SEP #$10
