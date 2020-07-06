@@ -39,11 +39,8 @@ cd asm
 
 # non-freespace
 ./asar.exe sluggytheunshowered.asm ../smwci.smc
-./asar.exe raphael_hacks.asm ../smwci.smc
-./asar.exe smallerboo.asm ../smwci.smc
 ./asar.exe salvo_fix.asm ../smwci.smc
 ./asar.exe naval_fix.asm ../smwci.smc
-./asar.exe taptaptherednosedreindeer.asm ../smwci.smc
 ./asar.exe entrance_data.asm ../smwci.smc
 ./asar.exe rotating4doors.asm ../smwci.smc
 ./asar.exe better_midrings.asm ../smwci.smc
