@@ -330,25 +330,6 @@ twice.///
     Exit
 /_C
 
-36
-/\\Well, well, well,
-look who the cat
-dragged in! I'm
-amazed to see
-you've made it this
-far, Yoshi! But it
-all ends here!
-You'll never reach
-our prince! Don't
-bother trying to,
-and even if
-you do...///
-
-37
-/\\GOOD LUCK GETTING
-UP THAT TOWER!
-KYA HA HA HA!///
-
 /__
 
 1 - 1
@@ -794,8 +775,8 @@ The Great Wall of
 5 - 8
           Prince
    Bowser's Castle
-36
-37
+0
+0
 0
 0
 
