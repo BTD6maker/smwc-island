@@ -1,7 +1,5 @@
 import struct, sys
 
-sys.argv=["texteditor.py","orig.smc","import"]
-
 #These arrays convert between special symbols and hex.
 hextoarray=[0x26,0x27,0x2B,0x36,0x37,0x38,0x39,0x3A,0x3B,0x3C,0x3D,0x3E,0x3F,0xC4,0xC5,0xC6,0xC7,0xC8,0xC9,0xCE,0xCF,0xD1,0xF3]
 arraytoascii=[":",";","'","=",",","e","i","t","r","h","f","n",".","(",")","?","!","_","-","~",",","\"","."]
@@ -298,7 +296,7 @@ def file_to_translevels(file):
 def message_text_to_hex(textmessage):
     hexmessage = bytearray()
     #Special case for SMWCI
-    if textmessage.startswith("/\\Huh??")
+    if textmessage.startswith("/\\\\Huh??"):
         hexmessage = mineminehex
         return hexmessage    
     hexmessage = [0xFF, 0x05]
