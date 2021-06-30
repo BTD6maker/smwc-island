@@ -64,14 +64,13 @@ Find another way
 inside!///
 
 6
-/\\SAFETY CODE
-VIOLATION: This
+/\\WARNING: This
 castle is full of
 toxic gas.
-Collecting stars
-and staying in
-motion is advised
-for your health.///
+Collect stars or
+dive into water
+to keep yourself
+alive!///
 
 7
 /\\   Hovering Jump:
@@ -139,12 +138,10 @@ is about to steal
 your life away!///
 
 15
-/\\Does widdle baby
-Mario want to be
-an astronaut?
-No? TOO BAD!!
-You two are going
-to SPACE anyway!///
+/\\Good news! You've
+just won a one-way
+express ticket
+to the MOON!///
 
 16
 /\\Little slug! Hear
@@ -159,72 +156,70 @@ boss for-
 Ah, forget it ...///
 
 18
-/\\Tap, tap, tap ...
-This guy is 100
-percent invincible!
-Now I can't lose!!///
+/\\You may think
+you're tough, but
+this tap-tap is
+even tougher!///
 
 19
-/\\When the moon hits
-your eye like a
-big Koopa shell...
-THAT'S AMORE!!
-Make this quick,
-Koopa! I've got a
-strange craving
-for some pasta ...///
+/\\Don't worry,
+I'm not going
+to sing the
+song ...///
 
 20
 /\\Well, Yoshi, it's
-been a gas!
-But how will you
-triumph against a
-target you can't
-hit?///
+been a gas! But
+this is the end
+of the road!
+After all, how
+can you triumph
+against a target
+you can't hit?///
 
 21
-/\\YOU! are n-n-not
-welcome HERE!!!
-Yoshi,please hand
-OVER THE BABY!///
+/\\So it's come to
+this, then ...
+It's time to face
+you myself!///
 
 22
-/\\Oh, dear ...
-What to do ...
-Young Master
-Bowser wakes ...///
+/\\Ack, I woke up
+the kid! Young
+Master Bowser,
+go back to bed!///
 
 23
-/\\Kamek, it's too
-noisy in here!!
-I wanna go
-sweepy-byyye!!!///
+/\\Geez, Kamek!
+Could you keep it
+down? You're so
+noisy!///
 
 24
-/\\Huh??
-Hmm?!!?
-Mmmmm!!!!?!
-
-What kind of gween
-donkey is dat?
-Looks wyke fun!
-Me wanna ri-ide!!!
+/\\Huh?
+Who are you guys?
 
 
-/TS/31MINE!!
+Were you an'
+Kamek fighting?
+I bet I could
+beat you easy!
 
 
-MINE!!!///
+/TS/31LET'S
+
+
+ROCK!!!///
 
 25
-/\\How dare you?!
-It's not fair ...
-You are such a
-meanie ...
-Someday ...
-We will be back ...
-You'll see!
-Waaaaaah ...///
+/\\Well, Yoshi, it's
+over. You win.
+Are you satisfied
+with yourself?
+Just you wait!
+We'll be back
+when you least
+expect it!///
 
 26
 /\\Yoshi, why did you
@@ -421,7 +416,7 @@ twice.///
 0
 
 1 - ?
-      /YY Time!
+    /YY Yoshi Time!
 
 0
 0
