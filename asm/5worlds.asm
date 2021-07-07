@@ -1,14 +1,14 @@
-; dark world appearing on title
-org $178150
-  CPX #$04
+; dark world appearing on title (appears to crash after World 4)
+;org $178150
+;  CPX #$04
 
 ; show flags from previous worlds on title
 org $178523
   CMP #$08
 
-; trigger transport to dark world
-org $178C94
-  CPX #$10
+; trigger transport to dark world (appears to crash after World 4)
+;org $178C94
+;  CPX #$10
 
 ; disable bonus tiles from loading bonus games
 org $17B4AE
