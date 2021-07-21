@@ -33,7 +33,7 @@ cd asm
 ./asar.exe poochy_bonus_game.asm ../smwci.smc
 ./asar.exe nep-enut.asm ../smwci.smc
 ./asar.exe scroll_rates.asm ../smwci.smc
-./asar.exe revert_FFs.asm ../smwci.smcf
+./asar.exe revert_FFs.asm ../smwci.smc
 ./asar.exe yi_expand_font.asm ../smwci.smc
 
 # non-freespace
