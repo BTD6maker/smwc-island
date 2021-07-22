@@ -35,7 +35,6 @@ cd asm
 ./asar.exe scroll_rates.asm ../smwci.smc
 ./asar.exe revert_FFs.asm ../smwci.smc
 ./asar.exe yi_expand_font.asm ../smwci.smc
-./asar.exe flower_fix.asm ../smwci.smc
 
 # non-freespace
 ./asar.exe sluggytheunshowered.asm ../smwci.smc

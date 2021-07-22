@@ -501,6 +501,8 @@ BurtBoss:
 !arenaprevminimum = $0274  ; stored minimum value for camera X lower boundary
 !arenaprevmaximum = $0276  ; stored maximum value for camera X upper boundary
 
+!specialsprbuffer = $027E
+
 ;----------------------------------------------------------------------------------------
 
 Coliseum:
@@ -575,11 +577,11 @@ Coliseum:
 	;0004 = two arrows (for twin burt)
 
 .Numbers          ;sprite ID of the sprite, some sprites listed below, more in Golden Egg
-    dw $001E : dw $0159,$0159 : dw $0066,$009E,$0065,$0113 : dw $00E7,$0113 : dw $015E,$00FA,$009B
+    dw $001E : dw $0159,$0159 : dw $0066,$009E,$0115,$0113 : dw $00E7,$0113 : dw $015E,$00FA,$009B
     ;lone shyguy, double grunt, ptooie + chomp rock + red coin + snifit, twin burt + snifit, shyguy wheel + flower + mace guy
     dw $00FB : dw $00FC,$00FC : dw $00FC,$00FB,$00FC : dw $00FB,$00FC : dw $00FC,$00E7 : dw $0113,$00E7 : dw $0159,$00FC,$00FB,$00FC,$00FB,$015B
     ;spearguy * 8, spearguy * 2 + burt, 1 burt + snifit + grunt, spearguy * 4 + dancing guy * 2
-    dw $0113,$0113 : dw $009F,$009E,$010E : dw $00FB,$00FC : dw $010E,$0003,$010E,$0113,$015A : dw $0159,$015A : dw $001E,$0065
+    dw $0113,$0113 : dw $009F,$009E,$010E : dw $00FB,$00FC : dw $010E,$0003,$010E,$0113,$015A : dw $0159,$015A : dw $001E,$0115
     ;snifit * 2, spitty plant + rock + crate (star), spear guy * 2 , crate (star) * 2 + crate (key) + snifit + grunt, grunt * 2, lone shyguy + red coin
 
 
@@ -607,11 +609,35 @@ Coliseum:
     ;010E = crate (stars)
 
 .Idle
-    ;------------ wait and see if yoshi enters arenas
+.NoArena
     LDA !arenahistage
     ASL           ;index by current arena *2
     AND #$00FF
     TAX
+
+    LDY #$5C
+.FlowerLoop
+	LDA $6F00,y
+	CMP #$0010
+	BCC .Next
+	LDA $7360,y
+	CMP #$00FA
+	BNE .Next
+	LDA $70E2,y
+	AND #$FF00
+	CMP .ArenaX,x
+	BNE .Next
+	LDA $74A0,y
+	STA !specialsprbuffer
+	PHX
+	PHY
+	TYX
+	JSL $03A32E
+	PLY
+	PLX
+.Next
+	DEY #4
+	BPL .FlowerLoop
 
     LDA $6094     ;camera x
     INC A
@@ -621,7 +647,6 @@ Coliseum:
     CMP .ArenaX,x ;check if he's in the arena area
     BCC .return3  ;if not, RTS
 
-print "Init arena: $",pc
     LDA #$0002   ;invoke first wave by setting it to the timer state
     STA !arenastate
 
@@ -649,14 +674,6 @@ print "Init arena: $",pc
 	PHA
 	PLD
 
-	LDX !arenahistage
-	LDY .ArenaScreen,x
-	LDA $6CAA,y
-	ASL
-	AND #$003F
-	TAX
-	STZ $00,x
-
 	PLD
 	REP #$10
 
@@ -670,9 +687,6 @@ print "Init arena: $",pc
 .ClearList    ;which sprites to clear at the end of a round
     dw $015B,$015E,$0114,$009E
     ;dancing spear guy, shyguy wheel, snifit bullet, chomp rock
-
-.ArenaScreen	; The screen number for each arena
-db $24,$2B,$2E
 
 .CheckEnemies
     LDA !arenaframes
@@ -795,7 +809,10 @@ db $24,$2B,$2E
 
 
     LDA .SpritesInWave,x
-    BMI .endarena         ;if entry is FFFF, end arena
+    BPL .startarena         ;if entry is FFFF, end arena
+    JMP .endarena
+
+.startarena
     STA !arenascount      ;how many sprites to summon this time around
     CLC
     ADC !arenasindex
@@ -824,6 +841,22 @@ db $24,$2B,$2E
     LDA .YPos,x
     STA $7182,y   ;store to sprite y
 	STA $02
+
+	LDA $7360,y   ; If a flower: Put level ID back.
+	CMP #$00FA
+	BNE .NotFlower
+	LDA !specialsprbuffer
+	STA $74A0,y
+.NotFlower
+
+	LDA $7360,y   ; If a moving coin: Make it red
+	CMP #$0115
+	BNE .NotCoin
+	LDA $7042,y
+	AND #$FFF1
+	ORA #$0002
+	STA $7042,y
+.NotCoin
 
 	LDA #$01D4
     JSL $008B21   ;spawn an ambient sprite (with init) (and get its index into y)
@@ -874,6 +907,13 @@ db $24,$2B,$2E
     LDA .PrizeY,x ;load prize sprite's y pos
     STA $7182,y   ;store to sprite y
 	STA $02       ;also preserve it
+
+	LDA $7360,y   ; If a flower: Put level ID back.
+	CMP #$00FA
+	BNE .NotFlowerPrize
+	LDA !specialsprbuffer
+	STA $74A0,y
+.NotFlowerPrize
 
 	LDA #$01D4
     JSL $008B21   ;spawn an ambient sprite (with init) (and get its index into y)
